@@ -1,0 +1,19 @@
+header {
+  height: 100px;
+  width: 100%;
+  background-color: #FFF;
+  box-shadow: #0000003b 1px 1px 30px 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+
+  .logo {
+    margin-left: .5rem;
+  }
+
+  .login__btn {
+    background-color: #fff;
+    margin-right: .5rem;
+  }
+}

@@ -1,0 +1,15 @@
+@import "../../styles/globals.scss";
+
+.button {
+  border: none;
+  padding: .8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  font-family: $font-roboto;
+
+  &.blue {
+    background-color: rgb(0, 140, 255);
+    color: white;
+  }
+}

@@ -1,0 +1,43 @@
+.post {
+  background-color: #fff;
+  margin-bottom: 1rem;
+  box-shadow: #0000002f 1px 1px 10px 1px;
+  padding-bottom: 1rem;
+  .post__image {
+    object-fit: cover;
+  }
+
+  .post__title {
+    padding: 0rem 1rem;
+    margin: 0;
+    font-weight: 300;
+  }
+
+  .post__actions {
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+
+    .like_icons {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .user__info {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+
+    .username {
+      margin: .6rem .6rem;
+      font-weight: 400;
+    }
+    .user__picture {
+      border-radius: 100%;
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+    }
+  }
+}
