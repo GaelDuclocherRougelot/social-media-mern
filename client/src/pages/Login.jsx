@@ -1,13 +1,16 @@
 // import { useState } from 'react';
+import LoginForm from '../components/Forms/LoginForm/LoginForm';
 import Header from '../components/Header/Header';
+import './Login.scss';
 
 function Login() {
 
   return (
     <div className="App">
       <Header />
-      <main>
-        <h1>Login page</h1>
+      <main className='main__login'>
+        <h1>Login</h1>
+        <LoginForm />
       </main>
     </div>
   );

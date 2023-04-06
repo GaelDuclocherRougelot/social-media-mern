@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import './styles/reset.css';
 import App from './App';
 import Login from './pages/Login';
+import './styles/reset.css';
 
 const router = createBrowserRouter([
   {
@@ -11,13 +11,13 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: '/login',
+    path: '/Login',
     element: <Login />,
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

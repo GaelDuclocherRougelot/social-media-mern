@@ -17,7 +17,7 @@ module.exports = {
       res.status(201).json({ user: user._id });
     } catch (error) {
       const errorRegister = errors.registerErrors(error);
-      res.status(500).json({errorRegister});
+      res.json({errorRegister});
     }
   },
   async login(req, res) {
