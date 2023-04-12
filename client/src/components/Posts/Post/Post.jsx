@@ -1,9 +1,8 @@
 import './Post.scss';
-import heart from '../../../assets/heart.svg';
-// import heartLiked from '../../../assets/heart-liked.svg';
+import heartLiked from '../../../assets/heart-liked.png';
 import comment from '../../../assets/comment.svg';
+import followButton from '../../../assets/follow.png';
 
-import Button from '../../Button/Button.jsx';
 export default function Post(props) {
   return (
     <div className="post">
@@ -13,28 +12,29 @@ export default function Post(props) {
           className="user__picture"
           src="https://res.cloudinary.com/dhiwunlet/image/upload/v1674747098/pictures/p466h8uizwvvkitgfc1u.jpg"
           alt="profile pic"
+          loading='lazy'
         />
         <h4 className="username">Finitix</h4>
-        <Button color="blue" title="Follow" />
+        <img src={followButton} alt='follow button' />
       </div>
 
       {/* Content */}
       {props.post.picture && (
-        <img className="post__image" src={props.post.picture} alt="post img" />
+        <img className="post__image" src={props.post.picture} alt="post img" loading='lazy' />
       )}
       {/* Actions (like, comment) */}
       <div className="post__actions">
-        <img className="like__icons" src={heart} width={50} alt="like icon" />
+        <img className="like__icons" src={heartLiked} width={30} alt="like icon" />
         {/* <img className="like__icons" src={heartLiked} width={50} alt="liked icon" /> */}
         <img
-          className="like__icons"
+          className="comment__icon"
           src={comment}
-          width={50}
-          alt="liked icon"
+          width={35}
+          alt="comment icon"
         />
       </div>
 
-      <p className="post__title">{props.post.message}</p>
+        <p className="post__title">{props.post.message}</p>
     </div>
   );
 }

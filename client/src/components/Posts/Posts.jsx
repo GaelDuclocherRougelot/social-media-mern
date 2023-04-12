@@ -11,7 +11,7 @@ export default function Posts() {
     .then(data => {
       setPosts(data);
     })
-  });
+  }, []);
 
   return (
     <section className="posts">

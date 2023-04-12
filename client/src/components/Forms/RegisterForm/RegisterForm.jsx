@@ -1,9 +1,12 @@
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useRef } from 'react';
 import '../Form.scss';
 
 export default function RegisterForm() {
+  const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
@@ -20,8 +23,8 @@ export default function RegisterForm() {
   const onSubmit = (data) => {
     axios
       .post('http://localhost:5000/api/v1/user/register', data)
-      .then((response) => {
-        console.log(response.data);
+      .then(() => {
+        navigate('/login');
       });
   };
 

@@ -1,17 +1,32 @@
-// import { useState } from 'react';
+import { useState } from 'react';
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.scss';
-import Header from './components/Header/Header';
-import Posts from './components/Posts/Posts';
+import Home from './pages/Home/Home';
+import Register from './pages/Register/Register';
+import Login from './pages/Login/Login';
+import Profile from './pages/Profile/Profile';
+import Protected from './utils/PrivateRoutes';
 
 function App() {
+  const [isLoggedIn] = useState(null); // TODO replace by a useContext
 
   return (
-    <div className="App">
-      <Header />
-      <main>
-        <Posts />
-      </main>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register/>} />
+        <Route
+          path="/profile"
+          element={
+            <Protected isLoggedIn={isLoggedIn}>
+              <Profile />
+            </Protected>
+          }
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

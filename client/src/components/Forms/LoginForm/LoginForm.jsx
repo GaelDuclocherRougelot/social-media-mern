@@ -18,7 +18,8 @@ export default function RegisterForm() {
     axios
       .post('http://localhost:5000/api/v1/user/login', data)
       .then((response) => {
-        console.log(response.data);
+        window.localStorage.setItem('access_token', response.data.access_token);
+        console.log(window.localStorage.getItem('access_token'));
       });
   };
 
